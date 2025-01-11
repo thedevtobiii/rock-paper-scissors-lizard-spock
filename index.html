@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spock Rock Game</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- header -->
+         <div class="header">
+            <h1>Rock Paper Scissors Lizard Spock</h1>
+         </div>
+         <!-- player container -->
+          <div class="player-container" id="player">
+            <h2>You - <span id="score">0</span> </h2>
+            <span class="choice" id="playerchoice"> --- Choice </span>
+            <i class="fa-regular fa-hand-back-fist" title="rock" id="playerrock"></i>
+            <i class="fa-regular fa-hand" title="paper" id="playerPaper"></i>
+            <i class="fa-regular fa-hand-scissors" title="scissors" id="playerscissors"></i>
+            <i class="fa-regular fa-hand-lizard" title="lizard" id="playerlizard"></i>
+            <i class="fa-regular fa-hand-spock" title="spock" id="playerspock"></i>   
+          </div>
+            <!-- computer container -->
+            <div class="player-container" id="computer">
+                <h2>You - <span id="score">0</span> </h2>
+                <span class="choice" id="computerchoice"> --- Choice </span>
+                <i class="fa-regular fa-hand-back-fist" title="rock" id="computerrock"></i>
+                <i class="fa-regular fa-hand" title="paper" id="computerpaper"></i>
+                <i class="fa-regular fa-hand-scissors" title="scissors" id="computerscissors"></i>
+                <i class="fa-regular fa-hand-lizard" title="lizard" id="computerlizard"></i>
+                <i class="fa-regular fa-hand-spock" title="spock" id="computerspock"></i>     
+              </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

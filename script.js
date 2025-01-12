@@ -38,10 +38,20 @@ let computerChoice = '';
 //reset all selected icon
 function resetSelected(){
   allGameIcons.forEach((icon)=>{
-  icon.classList.remove('selected');
+  icon.classList.remove('selected');  
   });
 }
-
+// reset score, player choice, computer choice
+function resetAll(){
+  playerScoreNumber = 0;
+  computerScoreNumber = 0;
+  playerScoreEl.textContent = playerScoreNumber;
+  computerScoreEl.textContent = computerScoreNumber;
+  playerChoiceEl.textContent = '';
+  computerChoiceEl.textContent = '';
+  resultText.textContent = '';
+  resetSelected();
+}
 //random computer choice
 function computerRandomChoice(){
   const computerChoiceNumber = Math.random();
@@ -141,4 +151,5 @@ switch (playerchoice) {
               break;                    
 }   
 }     
-// done with player selection  
+// initial value
+resetAll();  

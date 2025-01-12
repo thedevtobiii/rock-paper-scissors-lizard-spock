@@ -56,6 +56,7 @@ function resetAll(){
   resultText.textContent = '';
   resetSelected();
 }
+window.resetAll = resetAll;   
 //random computer choice
 function computerRandomChoice(){
   const computerChoiceNumber = Math.random();

@@ -31,6 +31,8 @@ const choices = {
   lizard: { name: 'Lizard', defeats: ['paper', 'spock'] },
   spock: { name: 'Spock', defeats: ['scissors', 'rock'] },
 };
+let playerScoreNumber = 0;  
+let computerScoreNumber = 0;
 
 let computerChoice = '';
 //reset all selected icon
@@ -83,17 +85,36 @@ switch (computerChoice) {
 }   
 }   
   
+function updateScore(playerchoice){
+  if (playerchoice === computerChoice){
+    resultText.textContent = "it's a tie";  
+  } else {
+    const choice = choices[playerchoice];
+    console.log (choice.defeats.indexOf(computerChoice));  
+    if (choice.defeats.indexOf(computerChoice) > -1){
+      resultText.textContent = "You Won";
+      playerScoreNumber = playerScoreNumber + 1;    
+      playerScoreEl.textContent = playerScoreNumber;        
+    } else {
+      resultText.textContent = "You Lose";  
+      computerScoreNumber = computerScoreNumber + 1;
+      computerScoreEl.textContent = computerScoreNumber;                
+    }
+  }
+
+}
 
 //call functions to process turn
-function checkResult(){
+function checkResult(playerchoice){
 resetSelected();
 computerRandomChoice();
 displayComputerChoice();  
+updateScore(playerchoice);
 }
 
 // passing player selection values
 function select(playerchoice){
-  checkResult();
+  checkResult(playerchoice);
 // update player choice
 switch (playerchoice) {
   case 'rock':
